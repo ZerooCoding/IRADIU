@@ -29,7 +29,7 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
  */
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
-  client.user.setActivity(`${PREFIX}help and You 😊`, { type: "LISTENING" });
+  client.user.setActivity(`$join and enjoy 💗`, { type: "LISTENING" });
 });
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
