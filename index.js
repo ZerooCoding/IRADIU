@@ -47,7 +47,7 @@ client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
 
 /**
- * Import all commands
+ * Import all command
  */
 const commandFiles = readdirSync(join(__dirname, "commands")).filter((file) => file.endsWith(".js"));
 for (const file of commandFiles) {
