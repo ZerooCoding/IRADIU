@@ -28,7 +28,7 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
  * Client Events
  */
 client.on("ready", () => {
-    const channel = client.channels.cache.get("ChannelIDhere");
+    const channel = client.channels.cache.get("759439449188204558");
     if (!channel) return console.error("The channel does not exist!");
     channel.join().then(connection => {
         // Yay, it worked!
