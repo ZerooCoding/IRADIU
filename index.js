@@ -28,16 +28,16 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
  */
 
 client.on("ready", () => {
-  const channel = client.channels.cache.get("759439449188204558");
-  if (!channel) return console.error("The channel does not exist!");
-  channel.join().then(connection.play(ytdl('https://www.youtube.com/watch?v=J8yquydd3Ao&list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L&index=10',  { filter: 'audioonly' })));  {
-      // Yay, it worked!
-      console.log("Successfully connected.");
-  }).catch(e => {
+    const channel = client.channels.cache.get("759439449188204558");
+    if (!channel) return console.error("The channel does not exist!");
+    channel.join().then(connection.play(ytdl('https://www.youtube.com/watch?v=J8yquydd3Ao&list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L&index=10', { filter: 'audioonly' })); => {
+        // Yay, it worked!
+        console.log("Successfully connected.");
+    }).catch(e => {
 
-      // Oh no, it errored! Let's log it to console :)
-      console.error(e);
-  });
+        // Oh no, it errored! Let's log it to console :)
+        console.error(e);
+    });
 });
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
