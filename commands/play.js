@@ -1,6 +1,5 @@
 const { play } = require("../include/play");
 const ytdl = require("ytdl-core");
-connection.play(ytdl('https://www.youtube.com/watch?v=D1PvIWdJ8xo&list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L&index=3', { filter: 'audioonly' }));
 const YouTubeAPI = require("simple-youtube-api");
 const scdl = require("soundcloud-downloader");
 
