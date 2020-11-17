@@ -14,8 +14,7 @@ try {
   TOKEN = process.env.TOKEN;
   PREFIX = process.env.PREFIX;
 }
-const ytdl = require('ytdl-core');
-connection.play(ytdl('https://www.youtube.com/watch?v=TgOu00Mf3kI&list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L&index=1', { filter: 'audioonly' })); 
+const client = new Client({ disableMentions: "everyone" });
 
 client.login(TOKEN);
 client.commands = new Collection();
