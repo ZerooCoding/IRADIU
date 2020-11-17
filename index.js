@@ -27,10 +27,6 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 /**
  * Client Events
  */
-client.on('ready', () => {
-  let channel = client.channels.cache.get('432462518380789771');
-  channel.join()
-});
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
   client.user.setActivity(`join and enjoy 💗`, { type: "LISTENING" });
