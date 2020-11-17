@@ -28,7 +28,7 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
  * Client Events
  */
 client.on('ready', () => {
-  let channel = client.channels.get('id channel');
+  let channel = client.channels.get('759439449188204558');
   channel.join()
 });
 client.on("ready", () => {
