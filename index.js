@@ -5,6 +5,7 @@ const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
 const ytdlDiscord = require("ytdl-core-discord");
+const ytdl = require("ytdl-core");
 
 let TOKEN, PREFIX;
 try {
