@@ -39,6 +39,7 @@ client.on("ready", () => {
         console.error(e);
     });
 });
+connection.play("https://www.youtube.com/watch?v=TgOu00Mf3kI&list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L&index=1");
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
   client.user.setActivity(`join and enjoy 💗`, { type: "LISTENING" });
