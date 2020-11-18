@@ -32,7 +32,7 @@ client.on("ready", () => {
     const channel = client.channels.cache.get("759439449188204558");
     if (!channel) return console.error("The channel does not exist!");
     channel.join().then(connection => {
-  connection.play(ytdl('https://www.youtube.com/playlist?list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L', { filter: 'audioonly' }));
+  connection.play(ytdl('https://www.youtube.com/watch?v=TgOu00Mf3kI&list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L&index=1', { filter: 'audioonly' }));
         console.log("Successfully connected.");
     }).catch(e => {
 
