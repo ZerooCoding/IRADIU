@@ -5,8 +5,6 @@ const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
 const ytdl = require("ytdl-core");
-const YouTubeAPI = require("simple-youtube-api");
-const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
 
 let TOKEN, PREFIX;
 try {
@@ -32,30 +30,16 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 client.on("ready", () => {
     const channel = client.channels.cache.get("759439449188204558");
- if (!channel) return console.error("The channel does not exist!");
+    if (!channel) return console.error("The channel does not exist!");
     channel.join().then(connection => {
-    const search = 'https://www.youtube.com/playlist?list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L';
+  connection.play(ytdl('https://www.youtube.com/watch?v=LHWYSE85a6U', { filter: 'audioonly' }));
+        console.log("Successfully connected.");
+    }).catch(e => {
 
-      const results = YouTube.searchPlaylists(search, 1, { part: "song" });
-        playlist = results[0];
-        videos = playlist.getVideos(MAX_PLAYLIST_SIZE || 10, { part: "song" });
-
-    videos.forEach((video) => {
-      song = {
-        title: video.title,
-        url: video.url,
-        duration: video.durationSeconds
-      };
-
-   connection.play(song);
-         console.log("Successfully connected.");
-     }).catch(e => {
- 
-
-         console.error(e);
-     });
+        // Oh no, it errored! Let's log it to console :)
+        console.error(e);
     });
- });
+});
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
   client.user.setActivity(`join and enjoy 💗`, { type: "LISTENING" });
