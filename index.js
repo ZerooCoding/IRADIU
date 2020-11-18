@@ -41,10 +41,10 @@ client.on("ready", () => {
         // Oh no, it errored! Let's log it to console :)
         console.error(e);
     });
-});nt.on("ready", () => {
+client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
   client.user.setActivity(`join and enjoy 💗`, { type: "LISTENING" });
-});
+
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
 
