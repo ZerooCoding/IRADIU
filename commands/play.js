@@ -42,7 +42,7 @@ module.exports = {
 
     // Start the playlist if playlist url was provided
     if (!videoPattern.test(search) && playlistPattern.test(search)) {
-      return message.client.commands.get("playlist").execute(message, args);
+      return message.client.commands.get("playlist").execute(message, [search]);
     } else if (scdl.isValidUrl(url) && url.includes("/sets/")) {
       return message.client.commands.get("playlist").execute(message, args);
     }
