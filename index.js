@@ -5,6 +5,8 @@ const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
 const ytdl = require("ytdl-core");
+const YouTubeAPI = require("simple-youtube-api");
+const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
 
 let TOKEN, PREFIX;
 try {
