@@ -43,7 +43,6 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
      });
 
  });
- });
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
   client.user.setActivity(`join and enjoy 💗`, { type: "LISTENING" });
