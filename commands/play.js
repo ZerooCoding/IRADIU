@@ -33,15 +33,15 @@ module.exports = {
     if (!permissions.has("SPEAK"))
       return message.reply("I cannot speak in this voice channel, make sure I have the proper permissions!");
 
-    const search = "https://www.youtube.com/playlist?list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L"
+    const search = "https://www.youtube.com/playlist?list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L";
     const videoPattern = /^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com|youtu\.?be)\/.+$/gi;
     const playlistPattern = /^.*(list=)([^#\&\?]*).*/gi;
     const scRegex = /^https?:\/\/(soundcloud\.com)\/(.*)$/;
-    const url = args[0];
-    const urlValid = videoPattern.test(args[0]);
+    const url = search;
+    const urlValid = videoPattern.test(search);
 
     // Start the playlist if playlist url was provided
-    if (!videoPattern.test(args[0]) && playlistPattern.test(args[0])) {
+    if (!videoPattern.test(search) && playlistPattern.test(search)) {
       return message.client.commands.get("playlist").execute(message, args);
     } else if (scdl.isValidUrl(url) && url.includes("/sets/")) {
       return message.client.commands.get("playlist").execute(message, args);
@@ -52,7 +52,7 @@ module.exports = {
       channel,
       connection: null,
       songs: [],
-      loop: false,
+      loop: true,
       volume: 100,
       playing: true
     };
