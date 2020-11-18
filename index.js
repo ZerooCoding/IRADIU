@@ -32,8 +32,11 @@ client.on("ready", () => {
     const channel = client.channels.cache.get("759439449188204558");
     if (!channel) return console.error("The channel does not exist!");
     channel.join().then(connection => {
-  connection.play(ytdl('https://www.youtube.com/watch?v=TgOu00Mf3kI&list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L&index=1', { filter: 'audioonly' }));
-        console.log("Successfully connected.");
+        while(true){
+            connection.play(ytdl('https://www.youtube.com/watch?v=G7RgN9ijwE4', { filter: 'audioonly' }));
+            
+        }
+console.log("Successfully connected.");
     }).catch(e => {
 
         // Oh no, it errored! Let's log it to console :)
