@@ -32,7 +32,7 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
      const channel = client.channels.cache.get("759439449188204558");
      if (!channel) return console.error("The channel does not exist!");
      channel.join().then(connection => {
-   const song = connection.play(ytdl('https://www.youtube.com/watch?v=1Z6EBhtr9l4', { filter: 'audioonly' }))
+   const song = connection.play(ytdl('https://www.youtube.com/watch?v=1nITwAJO3cQ', { filter: 'audioonly' }))
 
     song.loop
          console.log("Successfully connected.");
