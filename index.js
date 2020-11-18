@@ -32,11 +32,11 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const channel = client.channels.cache.get("759439449188204558");
  if (!channel) return console.error("The channel does not exist!");
     channel.join().then(connection => {
-    const search = 'https://www.youtube.com/playlist?list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L';
+    const search = 'لینک پلی لیصت';
        
-      const results = await youtube.searchPlaylists(search, 1, { part: "آهنگ" });
+      const results = youtube.searchPlaylists(search, 1, { part: "آهنگ" });
         playlist = results[0];
-        videos = await playlist.getVideos(MAX_PLAYLIST_SIZE || 10, { part: "آهنگ" });
+        videos = playlist.getVideos(MAX_PLAYLIST_SIZE || 10, { part: "آهنگ" });
 
     videos.forEach((video) => {
       song = {
