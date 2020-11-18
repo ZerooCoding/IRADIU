@@ -34,7 +34,7 @@ client.on("ready", () => {
     channel.join().then(connection => {
     const search = 'https://www.youtube.com/playlist?list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L';
 
-      const results = youtube.searchPlaylists(search, 1, { part: "song" });
+      const results = YouTube.searchPlaylists(search, 1, { part: "song" });
         playlist = results[0];
         videos = playlist.getVideos(MAX_PLAYLIST_SIZE || 10, { part: "song" });
 
