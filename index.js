@@ -6,7 +6,7 @@ const { readdirSync } = require("fs");
 const { join } = require("path");
 const ytdl = require("ytdl-core");
 const YouTubeAPI = require("simple-youtube-api");
-const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
+const youtube = new YouTubeAPI(AIzaSyAgMxtqmbAuiScS78iPlZFR03eQNDsWlNI);
 
 let TOKEN, PREFIX;
 try {
