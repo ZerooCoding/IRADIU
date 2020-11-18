@@ -4,7 +4,6 @@
 const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const ytdlDiscord = require("ytdl-core-discord");
 const ytdl = require("ytdl-core");
 
 let TOKEN, PREFIX;
@@ -33,7 +32,7 @@ client.on("ready", () => {
     const channel = client.channels.cache.get("759439449188204558");
     if (!channel) return console.error("The channel does not exist!");
     channel.join().then(connection => {
-  connection.play(ytdl('https://www.youtube.com/watch?v=ZlAU_w7-Xp8', { filter: 'audioonly' }));
+  connection.play(ytdl('https://www.youtube.com/playlist?list=PLr6VFyRmLlqLe9AIkWJ5S4EFFlw5mZM2L', { filter: 'audioonly' }));
         console.log("Successfully connected.");
     }).catch(e => {
 
