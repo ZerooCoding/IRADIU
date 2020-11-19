@@ -42,7 +42,7 @@ client.on("ready", () => {
 });
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
-  client.user.setActivity(`join and do iu!play 💗`, { type: "LISTENING" });
+  client.user.setActivity(`iu!play 💗`, { type: "LISTENING" });
 });
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
