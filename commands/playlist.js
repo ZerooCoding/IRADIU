@@ -50,7 +50,7 @@ module.exports = {
       channel,
       connection: null,
       songs: [],
-      loop: false,
+      loop: true,
       volume: 100,
       playing: true
     };
