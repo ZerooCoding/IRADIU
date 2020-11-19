@@ -9,8 +9,8 @@ module.exports = {
 
     let helpEmbed = new MessageEmbed()
       .setTitle(`${message.client.user.username} Help`)
-      .setDescription("List of all commands")
-      .setColor("#F8AA2A");
+      .setDescription("Just Do iu!play And Enjoy")
+      .setColor("#9a00ff");
 
     helpEmbed.setTimestamp();
 
